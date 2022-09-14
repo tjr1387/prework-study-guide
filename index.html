@@ -12,7 +12,76 @@
       <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." />
     </header>
     <main>
-      <!-- Student code goes here -->
+      <section class="card" id="html-section">
+        <h2>HTML</h2>
+        <ul>
+          <li>The head element contains information about the webpage. Here are some elements you'll fine within:</li>
+            <ul>
+              <li> The 'title' element defines the title for a webpage. 
+                This element is required and is extremely important for Search Engine Optimization (SEO).
+              </li>
+              <li>
+                The 'style' element defines the CSS styles associated with a website.
+              </li>
+              <li>
+                The 'base' element defines the base URL for a webpage.
+              </li>
+              <li>
+                The 'link' element connects an external resource to the HTML document.
+              </li>
+              <li>
+                The 'meta' element defines metadata such as the character set, description, keywords, author, and viewport.
+              </li>
+            </ul>
+          <li>The body element represents the visible content shown to the user. Some <i>very common</i> tags:</li>
+            <ul>
+              <li>'h1' thru 'h6' (headings, 1 being the most prominment -- there should only ever be ONE h1 on a page)</li>
+              <li>'p' (paragraph)</li>
+              <li>'ul' and 'ol' (unordered lists, and ordered lists) with 'li' (items of the lists) inside htem </li>
+              <li>'img' (images) which inside the tag require a 'src' attribute (location of the image), and an 'alt' (text describing the image)</li>
+              <li>'a' (links; 'a' means 'anchor'), with a 'href' attribute (the URL the browser will go to when clicked)</li>
+              <li>'div' (an unspecific chunk, carved out in a block -- meaning content follow we be bumped onto another line beneath it)</li>
+              <li>'span' (an <i>inline</i> chunk, meaning the chunk carved out will stay on one line, and followign content can also be on that line</li>
+            </ul>
+        </ul>
+        <p>
+          A note on divs/semantics: tags like 'main', 'section' and 'nav' all behave like divs, but add more context to the specific function of those divs.
+          Generally, this is good practice. It adds more clarity for other devs looking at your work
+        </p>
+      </section>
+   
+      <section class="card" id="css-section">
+        <h2>CSS</h2>
+        <ul>
+          <li>Enter your CSS notes here:</li>
+        </ul>
+      </section>
+   
+      <section class="card" id="git-section">
+        <h2>Git</h2>
+        <ul>
+          <li>git status: checks what branch we are currently on</li>
+          <li>git checkout -b branch-name: creates a new branch and switches to it
+            <br>   ** if the branch already exists, you dont need the '-b' flag there **
+          </li>
+          <li>git branch: lists the branches of your current repo, with a * indiciting the currently active branch</li>
+          <li>git add [file]: add a file as it currently is to your next commit -- this is also called 'staging' a file</li>
+          <li>git commit -m "[msg]": commit the staged content, adding a descriptive message about what you're committing</li>
+          <li>git clone [URL]: retrieve an entire repo from a hosted location thru the given URL</li>
+          <li>git pull origin main: pulls in hte base branch into your feature branch to ensure you're up to date -- do this often</li>
+          <p>MAKE SURE to be on the correct branch even when making changes on your local machine as it may throw off the synchronization between the two.
+            This brought to you by 45 mins of rage because I tweaked 'index.html' when Bash had me in the 'feature/add-starter-code' (I should've been in main)
+            Actually I still don't know exactly why that happened.
+          </p>
+        </ul>
+      </section>
+   
+      <section class="card" id="javascript-section">
+        <h2>JavaScript</h2>
+        <ul>
+          <li>Enter your JavaScript notes here:</li>
+        </ul>
+      </section>
     </main>
 
     <footer>
