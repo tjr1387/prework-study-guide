@@ -15,7 +15,7 @@
     </header>
     <main>
       <section class="card" id="html-section">
-        <h2>HTML</h2>
+        <h2>HTML (the NOUNS of our webpages)</h2>
         <ul>
           <li>The head element contains information about the webpage. Here are some elements you'll fine within:</li>
             <ul>
@@ -32,35 +32,35 @@
               <li>'h1' thru 'h6' (headings, 1 being the most prominment -- there should only ever be ONE h1 on a page)</li>
               <li>'p' (paragraph)</li>
               <li>'ul' and 'ol' (unordered lists, and ordered lists) with 'li' (items of the lists) inside them </li>
-              <li>'img' (images) which inside the tag require a 'src' attribute (location of the image), and an 'alt' (text describing the image)</li>
-              <li>'a' (links; 'a' means 'anchor'), with a 'href' attribute (the URL the browser will go to when clicked)</li>
-              <li>'div' (an unspecific chunk, carved out in a block -- meaning content following this we be bumped onto another line beneath it)</li>
+              <li>'img' (images) which inside the tag requires a 'src' attribute (location of the image), and an 'alt' attribute (text describing the image)</li>
+              <li>'a' (links; 'a' means 'anchor'), with a 'href' attribute (the URL/file location the browser will go to when clicked)</li>
+              <li>'div' (an unspecific chunk, carved out in a block -- meaning content following this will be bumped onto another line beneath it)</li>
               <li>'span' (an <i>inline</i> chunk, meaning the chunk carved out will stay on one line, and following content can also be on that line</li>
             </ul>
         </ul>
         <p>
-          A note on divs/semantics: tags like 'main', 'section' and 'nav' all behave like divs, but add more context to the specific function of those divs.
-          Generally, this is good practice. It adds more clarity for other devs looking at your work
+          ** A note on divs/semantics: tags like 'main', 'section' and 'nav' all behave like divs, but add more context to the specific function of those divs.
+          Generally, this is good practice. It adds more clarity for other devs looking at your work **
         </p>
       </section>
    
       <section class="card" id="css-section">
-        <h2>CSS</h2>
+        <h2>CSS (the ADJECTIVES of our webpages)</h2>
         <h3>Some basic CSS properties:</h3>
           <ul>
             <li>'margin' indicates how much space we want around the <i>outside</i> of an element.</li>
             <li>'padding' indicates how much space we want around the content <i>inside</i> an element.</li>
             <li>'text-align' is the justification/positioning of the text (i.e. left, center, right)</li>
             <li>'font-weight' is the thickness of the text (can be measured in numbers by the hundred, or names like bold or bolder, e.g.)</li>
-            <li>''font-family' is the specific font used (i.e. Arial, Trebuchet, Times New Roman, etc.) -- there are defaults if you don't specify</li>
+            <li>'font-family' is the specific font used (i.e. Arial, Trebuchet, Times New Roman, etc.) -- there are defaults if you don't specify</li>
             <li>'color' is the text color</li>
             <li>'background-color' is the color of the entire background space of the element</li>
           </ul>
-          <p>** Colors can be described in a few different ways: pre-set color names (i.e. blue), RGB[A] values, or hex values**</p>
+          <p>** Colors can be described in a few different ways: pre-set color names (i.e. blue), RGB[A] values, or hex values; VS Code has a very easy-to-use 'color picker' that's point-and-click**</p>
           <h3>Ways to select elements:</h3>
             <ul>
               <li>Element/tag name</li>
-              <li>Class name (preceding the class name with a '.')</li>
+              <li>Class name (preceding the class name with a '.') -- this is more specific than tags, but less specific than IDs</li>
               <li>Id (preceding the id with a '#') -- this is the most specific</li>
             </ul>
           <p>'*' (asterisk) is used to select EVERY element of a page. You can also select the broad-scope tags, like 'html' or 'body', though I haven't seen it done often</p>
@@ -68,27 +68,85 @@
    
       <section class="card" id="git-section">
         <h2>Git</h2>
+        <h3>Some common commands (NOT comprehensive/exhaustive):</h3>
         <ul>
           <li>git status: checks what branch we are currently on</li>
           <li>git checkout -b [branch-name]: creates a new branch and switches to it
-            <br>   ** if the branch already exists, you dont need the '-b' flag there **
+            <ul>
+              <li> if the branch already exists, you dont need the '-b' flag there </li>
+            </ul>
           </li>
           <li>git branch: lists the branches of your current repo, with a * indiciting the currently active branch</li>
           <li>git add [file]: add a file as it currently is to your next commit -- this is also called 'staging' a file</li>
+            <ul>
+              <li>the '-A' flag will stage all files in the directory.. so far we've used this each time we've 'staged'</li>
+            </ul>
           <li>git commit -m "[msg]": commit the staged content, adding a descriptive message about what you're committing</li>
           <li>git clone [URL]: retrieve an entire repo from a hosted location thru the given URL</li>
-          <li>git pull origin main: pulls in hte base branch into your feature branch to ensure you're up to date -- do this often</li>
-          <p>MAKE SURE to be on the correct branch even when making changes on your local machine as it may throw off the synchronization between the two.
-            This brought to you by 45 mins of rage because I tweaked 'index.html' when Bash had me in the 'feature/add-starter-code' (I should've been in main)
-            Actually I still don't know exactly why that happened. Maybe 'git pull origin main' would've helped?
+          <li>git pull origin main: pulls in the base branch into your feature branch to ensure you're up to date -- do this often!</li>
+          <p>** MAKE SURE to be on the correct branch even when making changes on your local machine as it may throw off the synchronization between the two.
+            This brought to you by 45 mins of rage because I tweaked 'index.html' when Bash had me in the 'feature/starter-code' (I should've been in main)
+            Actually I still don't know exactly why that happened. Maybe 'git pull origin main' would've helped? **
           </p>
         </ul>
       </section>
    
       <section class="card" id="javascript-section">
-        <h2>JavaScript</h2>
+        <h2>JavaScript (the VERBS of our webpages) <span class="aside">(editorialized by my arrogance!)</span></h2>
+        <h3>Basic JS data-types ('primitives'):</h3>
+          <ul>
+            <li><b>string</b> (i.e. text; needs to be in quotes, unlike all other data-types)</li>
+            <li><b>number</b> (self-explanatory)</li>
+              <ul>
+                <li>worth noting that 'NaN' (Not a Number) is considered a 'number' data-type, despite the contradictory name.. lol.. I guess it helps prevent 'cast' errors?</li>
+              </ul>
+            <li><b>boolean</b> (true or false)</li>
+            <li><b>null</b> (void.. nothing.. but do <i>not</i> confuse that for the number zero!)</li>
+            <li><b>undefined</b> (this isn't 'nothing' per se; it's what it sounds like; it's nice to have, because it avoids 'crashing' the code in a lot of situations</li>
+            <li>there are a few others (BigInt, symbol, etc.) buuut above are the most common ones</li>
+          </ul>
+        <h3>Variables:</h3>
+          <ul>
+            <li>not much to say here -- if you've ever done algebra then you get it -- they're a word used to represent some data</li>
+            <li>when assigning one, you need to put 'var' prior to the variable name, then a "=", then the value</li>
+            <li>pretty sure we'll eventually be using 'let' (mutable) and 'const' (immutable) to define them, instead of 'var'.. but I could be wrong</li>
+          </ul>
+        <p>** Quick note about order -- a JS file is read from top to bottom (intuitive), so the order of you code matters! You don't want to reference a variable before you've assigned it! **</p>
+        <h3>Conditionals:</h3>
+          <ul>
+            <li>if/else statements which evaluate to a boolean</li>
+            <li>the concept of 'truthy' and 'falsy' values; it's easiest just to declare what most (or all?) the 'falsy' values are..</li>
+              <ul>
+                <li><b>FALSY values:</b> false, 0 (the number), "" (empty string), null, undefined, NaN</li>
+              </ul>
+            <li>we learned about the STRICT in/equality ('===' and '!=='), but there's also less strict in/equality ('==' and '!=') -- not used as much though</li>
+            <li>whichever the first (in order) conditional evaluates to 'true', the remainder of the conditional is skipped</li>
+          </ul>
+        <h3>Arrays <span class="aside">(*cough* LISTS *cough*, ahem, Python.. sorry)</span>:</h3>
+          <ul>
+            <li>sets of values, denoted by square brackets and separated by commas</li>
+            <li>they are 'indexed' in order -- just remember that the count starts at <b>ZERO</b> (not one)</li>
+            <li>the daya-types in arrays can be different for each item, they can even be other arrays/objects</li>
+            <li class="aside" style="font-size: 16px;">yeah.. objects *cough* DICTIONARIES *cough*.. sorry, Python again -- we aren't there yet anyway; let's disregard this for now</li>
+          </ul>
+        <h3>Loops:</h3>
         <ul>
-          <li>Enter your JavaScript notes here:</li>
+          <li>indicated by the 'for' keyword -- they usually pair with arrays, where you go through each item of an array</li>
+          <li>3 parts:</li>
+            <ul>
+              <li>initial expression (assigning a variable to a 'counter')</li>
+              <li>a condition (a boolean that must remain true to continue the loop; it'll end once the condition becomes false)</li>
+              <li>increment the counter (a shorthand for incrementing by one is '[vbl]++'); the plus one incrememnt is used often</li>
+            </ul>
+          <li>I'm going to whine for a moment about 'for-of' loops which are much sleeker when you're stepping through an entire array; but we'll get to that in time</li>
+        </ul>
+        <h3>Functions:</h3>
+        <ul>
+          <li>when you know your code will be repeating an action (or series of actions) you can define a function so you don't have to type the logic out each time (this is an example of the concept 'modularizing')</li>
+          <li>a function needs to be defined (keyword 'function') and named, with parens following (variables <i>can</i> go into the parens if the function takes an 'argument')</li>
+          <li>after opening the curly brace, the logic of the function goes inside</li>
+          <li>functions <i>can</i> 'return' values (I believe they return 'undefined' if there's no return statement) -- but we aren't there yet</li>
+          <li>remember to actually have the function execute you need to <i>call</i> it (use the function name with parens)</li>
         </ul>
       </section>
     </main>
